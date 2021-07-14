@@ -16,7 +16,7 @@
     --small-gutter: 16px;
     --medium-gutter: 30px;
     --large-gutter: 50px;
-    --header-bg-color: #2D25A0;
+    --blue-color: #2D25A0;
     --btn-bg-color: #E02C6D;
 }
 
@@ -63,6 +63,13 @@ h1 {
     text-transform: capitalize;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
 h3 {
     font-size: 28px;
     font-weight: 700;
@@ -88,6 +95,10 @@ img {
 /************************ 
     Row width and Some helper classes for faster development
 *************************/ 
+.section-title {
+    color: var(--text-color-black);
+    font-weight: 500;
+}
 
 .row {
     max-width: 1050px; /* 1050px is taken from the design*/
@@ -115,7 +126,7 @@ img {
 *************************/ 
 
 .header-section {
-    background-color: var(--header-bg-color);
+    background-color: var(--blue-color);
     color: var(--text-color-white);
 }
 
@@ -165,7 +176,43 @@ img {
     box-shadow:  0px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
+/************************ 
+    Styles for the Blog section
+*************************/ 
 
+.blog {
+    display: flex;
+    width: 70%;
+    margin: 0 auto 16px;
+    max-height: 400px;
+    background-color: #E7E7E8;
+}
+
+.blog img {
+    width: 280px;
+    max-height: 200px;
+}
+
+.blog-info {
+    padding: var(--small-gutter);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.date-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog a {
+    color: var(--blue-color);
+    border-bottom: 1px solid var(--blue-color);
+}
+
+/************************ 
+    Styles for the Sponsor section
+*************************/ 
 
 
 
@@ -212,3 +259,68 @@ a.social__link-item {
 }
 
 
+/************************ 
+    Media Queries
+*************************/ 
+
+/************************ 
+    Media Queries For Mobile Devices 
+*************************/ 
+
+@media only screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 6rem;
+    }
+    .header {
+        display: block;
+    }
+
+    .header__img {
+        margin-top: var(--medium-gutter);
+    }
+
+    .player-cards {
+        display: block;
+    }
+
+    .player-card:not(:last-child) {
+        margin-bottom: var(--small-gutter);
+    }
+
+    .blog {
+        display: block;
+        max-width: max-content;
+    }
+
+    .blog img {
+        width: 100%;
+    }
+}
+    
+
+/************************ 
+    Media Queries For Tablet Devices 
+*************************/
+@media only screen and (max-width: 1023px) {
+    
+    .section-title {
+        font-size: 4rem;
+    }
+
+    .row {
+        padding: var(--small-gutter);
+    }
+
+    .header__img img {
+        max-width: 100%;
+        margin: 0;
+    }
+    .blog {
+        width: 100%;
+    }
+
+    .player-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
