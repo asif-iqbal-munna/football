@@ -216,6 +216,7 @@ img {
 
 .sponsor__images .sponsor-img {
     width: 120px;
+    cursor: pointer;
 }
 
 .sponsor-img:not(:last-child) {
