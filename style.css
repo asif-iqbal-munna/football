@@ -214,7 +214,14 @@ img {
     Styles for the Sponsor section
 *************************/ 
 
+.sponsor__images .sponsor-img {
+    width: 120px !important;
+    cursor: pointer !important;
+}
 
+.sponsor-img:not(:last-child) {
+    margin-right: var(--small-gutter) !important;
+}
 
 /************************ 
     Styles for the footer section
