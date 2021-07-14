@@ -236,8 +236,7 @@ footer .row > * {
 }
 
 .social__item:not(:last-child) {
-    margin-right: 10
-    px ;
+    margin-right: 10px ;
 }
 
 a.social__link-item {
@@ -267,10 +266,14 @@ a.social__link-item {
     Media Queries For Mobile Devices 
 *************************/ 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+
+    .row {
+        padding: var(--small-gutter);
+    }
 
     h1 {
-        font-size: 6rem;
+        font-size: 5.2rem;
     }
     .header {
         display: block;
@@ -278,6 +281,10 @@ a.social__link-item {
 
     .header__img {
         margin-top: var(--medium-gutter);
+    }
+
+    .header__img img {
+        margin-left: 0;
     }
 
     .player-cards {
@@ -289,10 +296,15 @@ a.social__link-item {
     }
 
     .blog {
-        display: block;
-        max-width: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
+    .column-reverse {
+        margin-top: 60px;
+        flex-direction: column-reverse;
+    }
     .blog img {
         width: 100%;
     }
@@ -302,14 +314,17 @@ a.social__link-item {
 /************************ 
     Media Queries For Tablet Devices 
 *************************/
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 769px and max-width: 1023px;) {
     
-    .section-title {
-        font-size: 4rem;
-    }
-
     .row {
         padding: var(--small-gutter);
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+    .section-title {
+        font-size: 4rem;
     }
 
     .header__img img {
