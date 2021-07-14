@@ -214,6 +214,13 @@ img {
     Styles for the Sponsor section
 *************************/ 
 
+.sponsor__images .sponsor-img {
+    width: 120px;
+}
+
+.sponsor-img:not(:last-child) {
+    margin-right: var(--small-gutter);
+}
 
 
 
@@ -302,11 +309,27 @@ a.social__link-item {
     }
 
     .column-reverse {
-        margin-top: 60px;
+        margin-top: 70px;
         flex-direction: column-reverse;
     }
     .blog img {
         width: 100%;
+    }
+
+    .sponsor__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap:  var(--small-gutter);
+    }
+
+    .sponsor__images .sponsor-img {
+        width: 120px;
+        display: block;
+        margin: 0 auto;
+    }
+    .date-btn {
+    margin-top: var(--small-gutter);
     }
 }
     
