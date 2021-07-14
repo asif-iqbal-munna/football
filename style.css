@@ -216,11 +216,11 @@ img {
 
 .sponsor__images .sponsor-img {
     width: 120px !important;
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .sponsor-img:not(:last-child) {
-    margin-right: var(--small-gutter) !important;
+    margin-right: var(--small-gutter);
 }
 
 /************************ 
@@ -264,6 +264,10 @@ a.social__link-item {
 }
 
 
+
+
+
+
 /************************ 
     Media Queries
 *************************/ 
@@ -281,6 +285,9 @@ a.social__link-item {
     h1 {
         font-size: 5.2rem;
     }
+
+    /** Media Query for header section**/
+
     .header {
         display: block;
     }
@@ -293,6 +300,8 @@ a.social__link-item {
         margin-left: 0;
     }
 
+    /** Media Query for players section**/
+
     .player-cards {
         display: block;
     }
@@ -300,6 +309,8 @@ a.social__link-item {
     .player-card:not(:last-child) {
         margin-bottom: var(--small-gutter);
     }
+
+    /** Media Query for blog section**/
 
     .blog {
         width: 100%;
@@ -315,6 +326,11 @@ a.social__link-item {
         width: 100%;
     }
 
+    .date-btn {
+        margin-top: var(--small-gutter);
+    }
+    /** Media Query for sponsor section**/
+
     .sponsor__images {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -326,9 +342,6 @@ a.social__link-item {
         width: 120px;
         display: block;
         margin: 0 auto;
-    }
-    .date-btn {
-    margin-top: var(--small-gutter);
     }
 }
     
@@ -349,13 +362,20 @@ a.social__link-item {
         font-size: 4rem;
     }
 
+    /** Media Query for header section**/
+
     .header__img img {
         max-width: 100%;
         margin: 0;
     }
+
+    /** Media Query for blog section**/
+
     .blog {
         width: 100%;
     }
+
+    /** Media Query for players section**/
 
     .player-cards {
         grid-template-columns: repeat(2, 1fr);
