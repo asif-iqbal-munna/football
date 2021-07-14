@@ -210,9 +210,18 @@ img {
     border-bottom: 1px solid var(--blue-color);
 }
 
+/************************ 
+    Styles for the Sponsor section
+*************************/ 
 
+.sponsor__images .sponsor-img {
+    width: 120px;
+    cursor: pointer;
+}
 
-
+.sponsor-img:not(:last-child) {
+    margin-right: var(--small-gutter);
+}
 
 /************************ 
     Styles for the footer section
